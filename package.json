@@ -1,0 +1,29 @@
+{
+	"name": "glenncahill",
+	"description": "Glenn Cahill's portfolio website",
+	"version": "v0.1.4",
+	"homepage": "https://bitbucket.org/StyleKnights/glenn-cahill",
+	"author": {
+		"name": "Joshua Thornton",
+		"url": "https://github.com/Jshthornton"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://jthornton91@bitbucket.org/StyleKnights/glenn-cahill.git"
+	},
+
+	"preferGlobal": true,
+	
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+
+	"dependencies": {
+	},
+
+	"devDependencies": {
+		"grunt-cli": "0.1.x",
+		"grunt": "~0.4.1",
+		"grunt-contrib-jshint": "0.6.x"
+	}
+}
