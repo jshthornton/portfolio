@@ -1,9 +1,16 @@
 @import "reset";
-
-@import "grids/desktop";
-
 @import "compass";
-
 @import "font-awesome";
 
+@import "grids/desktop";
 @import "content";
+
+@media all and (min-width: 421px) and (max-width: 800px) {
+	@import "grids/tablet";
+	@import "tablet";
+}
+
+@media all and (max-width: 420px) {
+	@import "grids/mobile";
+	@import "mobile";
+}

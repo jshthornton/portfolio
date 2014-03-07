@@ -85,6 +85,7 @@ body {
 	}
 
 	div {
+		position: relative;
 		left: 50%;
 		margin-left: -2000px;
 		width: 4000px;
@@ -179,6 +180,7 @@ button.button-style1, a.psudo-button {
 }
 
 #logo {
+	position: relative;
 	margin-top: 32px;
 	width: 150px;
 	height: 150px;
@@ -186,6 +188,7 @@ button.button-style1, a.psudo-button {
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 	border-radius: 150px;
+	float: left;
 
 	> span {
 		@extend .no-text;

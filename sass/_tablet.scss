@@ -1,0 +1,54 @@
+.csstransforms.pointerevents .angle {
+	bottom: -279px;
+}
+
+#filler {
+	.stretch {
+		height: 88px;
+	}
+
+	.curve {
+		top: -20px;
+	}
+}
+
+#logo {
+	width: 100px;
+	height: 100px;
+	margin-top: 12px;
+
+	> img {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+#site-nav {
+	margin-top: 50px;
+
+	li {
+		padding-right: 40px;
+
+		&.first {
+			padding-left: 40px;
+		}
+
+		&.last {
+			padding-right: 0;
+		}
+	}
+}
+
+#jumbotron {
+	background-size: cover;
+	height: 573px;
+	margin-top: 55px;
+
+	.container_12 {
+		padding-top: 90px;
+	}
+}
+
+#phone-container {
+	display: none;
+}
