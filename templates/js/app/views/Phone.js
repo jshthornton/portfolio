@@ -11,9 +11,7 @@ define([
 		//itemCount,
 		//$items
 
-		init: function() {
-			this._super.apply(this, arguments);
-
+		initialize: function() {
 			_.bindAll(this);
 
 			this.$belt = $('.screen-belt', this.$el);

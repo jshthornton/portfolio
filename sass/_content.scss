@@ -138,12 +138,33 @@ button.button-style1, a.psudo-button {
 
 //Header
 #banner {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 182px;
 	z-index: 1;
+
+	&.small {
+		.curve {
+			display: none;
+		}
+
+		.stretch {
+			right: 0;
+			height: 55px;
+		}
+
+		#logo {
+			width: 50px;
+			height: 50px;
+			margin-top: 2px;
+		}
+
+		#site-nav {
+			margin-top: 20px;
+		}
+	}
 }
 
 #filler {
@@ -241,7 +262,9 @@ button.button-style1, a.psudo-button {
 //jumbotron
 #jumbotron {
 	margin-top: 75px;
+	width: 100%;
 	height: 696px;
+	position: fixed;
 
 	background: url(/images/jumbotron.jpg) no-repeat;
 	background-position: center 0;
@@ -249,6 +272,10 @@ button.button-style1, a.psudo-button {
 
 	text-align: center;
 	color: #fff;
+
+	.backgroundsize & {
+		background-size: cover;
+	}
 
 	@media screen and (min-width: 2014px) {
 		.backgroundsize & {
@@ -400,6 +427,18 @@ button.button-style1, a.psudo-button {
 		li {
 			position: relative;
 
+			&:nth-of-type(-n+3) {
+				margin-bottom: 45px;
+			}
+
+			&:nth-of-type(3n) {
+				margin-right: 0;
+			}
+
+			&:nth-of-type(3n+1) {
+				margin-left: 0;
+			}
+
 			> .icon {
 				width: 95px;
 				height: 95px;
@@ -420,33 +459,39 @@ button.button-style1, a.psudo-button {
 			}
 		}
 
-		.row1 {
-			margin-bottom: 45px;
+		.javascript {
 		}
 
-		.ps {}
-
-		.ai > .icon {
-			background-position: 0 -95px;
+		.php { 
+			> .icon {
+				background-position: 0 -95px;
+			}
 		}
 
-		.ae > .icon {
-			background-position: 0 -190px;
+		.sql { 
+			> .icon {
+				background-position: 0 -190px;
+			}
 		}
 
-		.pr > .icon {
-			background-position: 0 -285px;
+		.java {
+			> .icon {
+				background-position: 0 -285px;
+			}
 		}
 
-		.coda > .icon {
-			background-position: 0 -380px;
+		.python {
+			> .icon {
+				background-position: 0 -380px;
+			}
 		}
 
-		.c4d > .icon {
-			background-position: 0 -475px;
+		.csharp {
+			> .icon {
+				background-position: 0 -475px;
+			}
 		}
 	}
-
 
 	article.grid_4 {
 		padding-top: 50px;

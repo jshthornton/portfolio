@@ -37,14 +37,18 @@ define([
 
 	return _AppView.extend({
 		skills: [],
-		_biteId: null,
 
-		init: function(opts) {
-			this._super.apply(this, arguments);
-
-			this._biteId = bite.register({
-				reference: this.$el,
-				offset: -$(window).height() / 2,
+		initialize: function(opts) {
+			bite.register({
+				type: 'element',
+				$el: this.$el,
+				point: {
+					y: true
+				},
+				origin: {
+					y: 50,
+					unitY: '%'
+				},
 				once: true
 			}, _.bind(this.onBite, this));
 

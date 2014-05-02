@@ -8,6 +8,7 @@
 			'jquery': '../libs/jquery',
 			'Class': '../libs/Class',
 			'underscore': '../libs/lodash',
+			'backbone': '../libs/backbone',
 			'text': '../libs/text',
 			'modernizr': '../libs/modernizr',
 			'bite': '../libs/bite'
@@ -29,15 +30,13 @@
 	require([
 		'jquery',
 		'underscore',
-		'bite',
-		'parser'
-	], function($, _, bite, parser) {
-		bite.init($, _);
+		'views/Page'
+	], function($, _, Page) {
 
 		//Ready
 		$(function() {
-			parser.parse().then(function() {
-				bite.start();
+			var page = new Page({
+				el: document.body
 			});
 		})
 	});
