@@ -32,6 +32,10 @@ define([
 
 		levelUp: function(level) {
 			this.$xp.css('background-position', '0 ' + -(level * 140) + 'px');
+		},
+
+		undo: function() {
+			this.$xp.css('background-position', '0 0px');
 		}
 	});
 
@@ -39,6 +43,8 @@ define([
 		skills: [],
 
 		initialize: function(opts) {
+			_.bindAll(this);
+
 			bite.register({
 				type: 'element',
 				$el: this.$el,
@@ -49,8 +55,8 @@ define([
 					y: 50,
 					unitY: '%'
 				},
-				once: true
-			}, _.bind(this.onBite, this));
+				toggle: true
+			}, this.onBiteIn, this.onBiteOut);
 
 			_.each($('.icons li', this.$el), function(node, index) {
 				this.skills.push(
@@ -59,9 +65,15 @@ define([
 			}, this);
 		},
 
-		onBite: function() {
+		onBiteIn: function() {
 			_.each(this.skills, function(skill, index) {
 				skill.fill();
+			}, this);
+		},
+
+		onBiteOut: function() {
+			_.each(this.skills, function(skill, index) {
+				skill.undo();
 			}, this);
 		}
 	});

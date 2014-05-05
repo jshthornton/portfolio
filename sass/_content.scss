@@ -4,7 +4,9 @@ $body-font: 'Lato', sans-serif;
 //Util
 .no-text {
 	position: absolute;
-	left: -9999px;
+	text-indent: -100%;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 //Globals
@@ -39,7 +41,7 @@ body {
 	width: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: #9aec18;
+	background: #3a99d8;
 }
 ::-webkit-scrollbar-thumb:active {
 	background: #212121;
@@ -57,7 +59,7 @@ body {
 }
 
 .module.style2 {
-	background: #1a1a1a;
+	background: #1b2a3a;
 	color: #fff;
 }
 
@@ -78,7 +80,7 @@ body {
 
 	&.style2 {
 		div {
-			background: #1a1a1a;
+			background: #1b2a3a;
 		}
 	}
 
@@ -109,7 +111,7 @@ button.button-style1, a.psudo-button {
 	display: inline-block;
 	text-decoration: none;
 	cursor: pointer;
-	background: #41a919;
+	background: #3a99d8;
 	border: 0;
 	color: #fff;
 	font: {
@@ -126,10 +128,14 @@ button.button-style1, a.psudo-button {
 }
 
 .alt-text {
-	color: #9aec18;
+	color: #87c3ff;
 
 	&.style2 {
 		font-style: italic;
+	}
+
+	&.style3 {
+		font-weight: 400;
 	}
 }
 
@@ -146,7 +152,7 @@ button.button-style1, a.psudo-button {
 	transition: background-color 0.5s ease;
 
 	&.small {
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.8);
 
 		#logo {
 			opacity: 1;
@@ -198,7 +204,7 @@ button.button-style1, a.psudo-button {
 
 	.selected {
 		a {
-			color: #9aec18;
+			color: #7fb7f0;
 		}
 	}
 
@@ -206,6 +212,7 @@ button.button-style1, a.psudo-button {
 		display: block;
 		text-decoration: none;
 		text-transform: uppercase;
+		text-shadow: 1px 1px 0px #000;
 		color: #fff;
 		font: {
 			size: 1em;
@@ -213,7 +220,7 @@ button.button-style1, a.psudo-button {
 		}
 
 		&:hover, &:focus {
-			color: #9aec18;
+			color: #7fb7f0;
 		}
 	}
 }
@@ -229,10 +236,8 @@ button.button-style1, a.psudo-button {
 	position: fixed;
 
 	background: url(/images/jumbotron.jpg) no-repeat;
-	background-position: center 0;
+	background-position: center center;
 	background-attachment: fixed;
-
-	text-align: center;
 	color: #fff;
 
 	.backgroundsize & {
@@ -250,6 +255,7 @@ button.button-style1, a.psudo-button {
 		position: relative;
 		left: 66%;
 		margin-left: -400px;
+		text-align: center;
 	}
 
 	.compliment {
@@ -257,6 +263,7 @@ button.button-style1, a.psudo-button {
 		font: {
 			size: 1.7em;
 		}
+		text-shadow: 1px 1px 0px #000;
 	}
 
 	h1 {
@@ -264,8 +271,8 @@ button.button-style1, a.psudo-button {
 		font: {
 			size: 3.5em;
 		}
+		text-shadow: 1px 1px 0px #000;
 	}
-
 
 	.intro {
 		font: {
@@ -275,6 +282,11 @@ button.button-style1, a.psudo-button {
 		width: 550px;
 		margin: 0 auto;
 		margin-bottom: 80px;
+		text-shadow: 1px 1px 0px #000;
+	}
+
+	.psudo-button {
+		text-align: center;
 	}
 }
 
@@ -580,7 +592,7 @@ button.button-style1, a.psudo-button {
 		}
 
 		&:hover, &:focus {
-			color: #9aec18;
+			color: #7fb7f0;
 		}
 	}
 
