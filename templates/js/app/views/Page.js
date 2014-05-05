@@ -15,13 +15,15 @@ define([
 			_.bindAll(this);
 
 			this.render().then(this._onRender);
+
+			$(window).on('resize', this._onWindowResize);
 		},
 
 		render: function() {
 			return parser.parse();
 		},
 
-		_onRender: function() {
+		resizeJumbotron: function() {
 			var windowHeight = $(window).height(),
 				$jumbotron = $('#jumbotron'),
 				$padder = $('#padder');
@@ -31,12 +33,21 @@ define([
 				'margin-top': (windowHeight + 200) + 'px'
 			});
 
-			bite.start();
-
 			buoy.align({
 				$el: $('> .intro-container', $jumbotron),
 				$container: $jumbotron
 			});
-		}
+		},
+
+		//Events
+		_onRender: function() {
+			this.resizeJumbotron();
+
+			bite.start();
+		},
+
+		_onWindowResize: _.debounce(function() {
+			this.resizeJumbotron();
+		}, 100)
 	});
 })

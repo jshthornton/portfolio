@@ -2,30 +2,10 @@
 	bottom: -279px;
 }
 
-#filler {
-	.stretch {
-		height: 88px;
-	}
-
-	.curve {
-		top: -20px;
-	}
-}
-
 #logo {
-	width: 100px;
-	height: 100px;
-	margin-top: 12px;
-
-	> img {
-		width: 100px;
-		height: 100px;
-	}
 }
 
 #site-nav {
-	margin-top: 50px;
-
 	li {
 		padding-right: 40px;
 
@@ -40,12 +20,19 @@
 }
 
 #jumbotron {
-	background-size: cover;
 	height: 573px;
-	margin-top: 55px;
 
-	.container_12 {
-		padding-top: 90px;
+	.intro-container {
+		width: auto;
+		position: relative;
+		margin: 0 auto;
+		left: auto;
+		text-align: center;
+		padding: 0 10px;
+	}
+
+	.intro {
+		width: 100%;
 	}
 }
 

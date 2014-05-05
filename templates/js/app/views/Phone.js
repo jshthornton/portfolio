@@ -9,13 +9,20 @@ define([
 		index: 0,
 		//itemWidth,
 		//itemCount,
-		//$items
+		//$items,
+		//$frames
 
 		initialize: function() {
 			_.bindAll(this);
 
+			if(window !== parent) {
+				this.remove();
+				return;
+			}
+
 			this.$belt = $('.screen-belt', this.$el);
 			this.$items = $('> li', this.$belt);
+			this.$frames = $('> iframe', this.$items);
 			this.itemWidth = this.$items.eq(0).width();
 			this.itemCount = this.$items.length;
 
@@ -27,6 +34,9 @@ define([
 				.on('click', '.next', this._onNextClick);
 
 			this._buttonCheck();
+			
+			this.$frames[0].src = 'http://unilink.me/home';
+			this.$frames[1].src = 'http://mantrasolutions.co.uk/#/home';
 		},
 
 		move: function(oldIndex, newIndex) {
