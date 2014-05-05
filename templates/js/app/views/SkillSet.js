@@ -56,7 +56,20 @@ define([
 					unitY: '%'
 				},
 				toggle: true
-			}, this.onBiteIn, this.onBiteOut);
+			}, this.onBiteIn);
+
+			bite.register({
+				type: 'element',
+				$el: this.$el,
+				point: {
+					y: true
+				},
+				origin: {
+					y: 100,
+					unitY: '%'
+				},
+				toggle: true
+			}, $.noop, this.onBiteOut);
 
 			_.each($('.icons li', this.$el), function(node, index) {
 				this.skills.push(
