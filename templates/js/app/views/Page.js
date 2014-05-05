@@ -4,8 +4,9 @@ define([
 	'./_AppView',
 	'models/App',
 	'bite',
+	'buoy',
 	'parser'
-], function($, _, _AppView, App, bite, parser) {
+], function($, _, _AppView, App, bite, buoy, parser) {
 	'use strict';
 
 	return _AppView.extend({
@@ -27,10 +28,15 @@ define([
 
 			$jumbotron.height(windowHeight);
 			$padder.css({
-				'margin-top': windowHeight + 'px'
+				'margin-top': (windowHeight + 200) + 'px'
 			});
 
 			bite.start();
+
+			buoy.align({
+				$el: $('> .intro-container', $jumbotron),
+				$container: $jumbotron
+			});
 		}
 	});
 })
