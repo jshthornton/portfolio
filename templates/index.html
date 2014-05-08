@@ -22,19 +22,19 @@
 				<nav id="site-nav" class="grid_10 tablet_grid_10">
 					<ul class="clearfix">
 						<li class="first selected">
-							<a href="#">About me</a>
+							<a href="#jumbotron">About me</a>
 						</li>
 						<li>
-							<a href="#">Web</a>
+							<a href="#statement">Web</a>
 						</li>
 						<li>
-							<a href="#">Skills</a>
+							<a href="#skills">Skills</a>
 						</li>
 						<li>
-							<a href="#">CV</a>
+							<a href="/files/Joshua_Thornton_CV.pdf" target="_blank">CV</a>
 						</li>
 						<li class="last">
-							<a href="#">Contact me</a>
+							<a href="#contact">Contact me</a>
 						</li>
 					</ul>
 				</nav>
@@ -43,18 +43,19 @@
 
 		<section id="page">
 			<section id="jumbotron" class="module">
+				<div class="marklet"></div>
 				<div class="intro-container">
 					<article>
-						<p class="compliment">Ho-rah! You made it!</p>
+						<p class="compliment">You made it!</p>
 
 						<h1>Welcome to <span class="alt-text style3">JshThornton</span>.co.uk</h1>
 
 						<p class="intro">
 							I'm a web and software engineer from Oxford with the ability 
-							to create <span class="alt-text style2">beautiful</span>, <span class="alt-text style2">tasty</span>, <span class="alt-text style2">sexy</span> applications to make you go &ldquo;Wow!&rdquo;
+							to create <span class="alt-text style2">beautiful</span>, <span class="alt-text style2">tasty</span>, <span class="alt-text style2">fluid</span> applications to make you go &ldquo;Wow!&rdquo;
 						</p>
 
-						<a href="#" class="psudo-button">Have a look at my work</a>
+						<a href="#work" class="psudo-button">Have a look at my work</a>
 					</article>
 				</div>
 
@@ -65,17 +66,24 @@
 			</section>
 
 			<section id="statement" class="module style1">
+				<div class="marklet"></div>
 				<div class="container_12 clearfix">
-					<article class="grid_4 tablet_grid_4">
-						<h1></h1>
+					<article class="grid_4 tablet_grid_4 mobile_grid_4">
+						<h1>I make things 'work'</h1>
 
 						<p>
+							As a developer it is my job to a <span class="alt-text style2">beautiful</span> design and requirements then convert it into a fast, secure, and stable application.
+						</p>
+
+						<p>
+							An application can be in the form of a website, mobile application, or a desktop application (or even a hybrid of two).
 						</p>
 
 						<p class="last">
+							Have a play with the adaptive sites I have created in the mobile. They are fully functional.
 						</p>
 
-						<a href="#" class="psudo-button">See more of my work</a>
+						<a href="#work" class="psudo-button">See more of my work</a>
 					</article>
 
 					<div id="phone-container"  data-view="views/Phone">
@@ -109,6 +117,7 @@
 			</section>
 
 			<section id="skills" class="module style2" data-view="views/SkillSet">
+				<div class="marklet"></div>
 				<div class="container_12 clearfix">
 					<ul class="grid_6 tablet_grid_6 icons">
 						<li class="grid_2 tablet_grid_3 alpha javascript" data-xp="9">
@@ -139,16 +148,20 @@
 					</ul>
 
 					<article class="grid_4 tablet_grid_4 push_1">
-						<h1></h1>
+						<h1>A tool for every job</h1>
 
 						<p>
+							Most of the time any job can be in most languages, engines, and frameworks (platforms). 
+							Nevertherless, I like to first evaluate which platform would provide the fastest development and runtime speed.
 						</p>
 
 						<p class="last">
+							Fortunately I know an ample number of platforms, and have spent many hours learning and using these platforms.
 						</p>
 
 						<div class="hours">
-							<span class="total">96,048</span>
+							<!-- Calculate this on server Years * Weeks * Days * Hours => (Current) 9 * 52 * 5 * 6 -->
+							<span class="total">14,040</span>
 							<span class="lbl">hours</span>
 						</div>
 
@@ -159,23 +172,46 @@
 			</section>
 
 			<section id="clients" class="module style1">
+				<div class="marklet"></div>
 				<div class="container_12 clearfix">
-					<h1 class="grid_12"></h1>
+					<h1 class="grid_12">Clients</h1>
 
 					<ul id="client-list">
 						<li class="grid_3">
-							<div></div>
-							<span></span>
+							<div class="clients-hsbc" aria-hidden="true"></div>
+							<p>HSBC</p>
 						</li>
-						<li class="grid_3"><span></span></li>
-						<li class="grid_3"><span></span></li>
-						<li class="grid_3"><span></span></li>
-
-						<li class="grid_3"><span></span></li>
-						<li class="grid_3"><span></span></li>
-						<li class="grid_3"><span></span></li>
-						<li class="grid_3"><span></span></li>
+						<li class="grid_3">
+							<div class="clients-nationwide" aria-hidden="true"></div>
+							<p>Nationwide</p>
+						</li>
+						<li class="grid_3">
+							<div class="clients-anz" aria-hidden="true"></div>
+							<p>ANZ</p>
+						</li>
+						<li class="grid_3">
+							<div class="clients-mantra" aria-hidden="true"></div>
+							<p>Mantra Solutions</p>
+						</li>
 					</ul>
+				</div>
+
+				<div class="angle style2 decline"><div></div></div>
+			</section>
+
+			<section id="contact" class="module style2">
+				<div class="marklet"></div>
+				<div class="container_12 clearfix">
+					<h1 class="grid_12">Contact me</h1>
+				</div>
+
+				<div class="angle style1"><div></div></div>
+			</section>
+
+			<section id="work" class="module style1">
+				<div class="marklet"></div>
+				<div class="container_12 clearfix">
+					<h1 class="grid_12">Portfolio</h1>
 				</div>
 
 				<div class="angle style2"><div></div></div>
@@ -188,10 +224,10 @@
 
 				<nav class="grid_9">
 					<ul class="clearfix footer-list">
-						<li class="first"><a href="#">About me</a></li>
-						<li><a href="#">Web development</a></li>
-						<li><a href="#">CV</a></li>
-						<li><a href="#">Contact me</a></li>
+						<li class="first"><a href="#jumbotron">About me</a></li>
+						<li><a href="#statement">Web development</a></li>
+						<li><a href="/files/Joshua_Thornton_CV.pdf" target="_blank">CV</a></li>
+						<li><a href="#contact">Contact me</a></li>
 						<li><a href="#">Credits</a></li>
 						<li class="last social-list">
 							<h1>Social Links</h1>

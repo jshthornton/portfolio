@@ -17,6 +17,7 @@ define([
 			this.render().then(this._onRender);
 
 			$(window).on('resize', this._onWindowResize);
+
 		},
 
 		render: function() {
@@ -40,6 +41,10 @@ define([
 		},
 
 		//Events
+		events: {
+			'click a': '_onLinkClick'
+		},
+
 		_onRender: function() {
 			this.resizeJumbotron();
 
@@ -48,6 +53,34 @@ define([
 
 		_onWindowResize: _.debounce(function() {
 			this.resizeJumbotron();
-		}, 100)
+		}, 100),
+
+		_onLinkClick: function(e) {
+			var node = e.currentTarget;
+
+			if(location.host === node.host) {
+				e.preventDefault();
+
+				var href = node.href.replace(node.baseURI, '');
+				if(href.length) {
+					if(href[0] === '#' && href.length > 1) {
+						var $marklet = $(href + '> .marklet'),
+							top;
+
+						if(href === '#jumbotron') {
+							top = 0;
+						} else {
+							top = $marklet.offset().top;
+						}
+
+						$('html, body').animate({
+							scrollTop: top
+						}, 800);
+					} else {
+
+					}
+				}
+			}
+		}
 	});
 })

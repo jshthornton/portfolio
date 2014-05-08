@@ -12,6 +12,9 @@ define([
 		initialize: function() {
 			_.bindAll(this);
 
+			var _this = this,
+				$navLinks = $('#site-nav li', this.$el);
+
 			bite.register({
 				type: 'element',
 				$el: $('#statement'),
@@ -23,8 +26,85 @@ define([
 				},
 				toggle: true
 			}, 
-			_.bind(this._onJumbotronExit, this),
-			_.bind(this._onJumbotronReturn, this));
+			this._onJumbotronExit,
+			this._onJumbotronReturn);
+
+
+			bite.register({
+				type: 'element',
+				$el: $('#statement'),
+				point: {
+					y: true
+				},
+				origin: {
+					y: 50,
+					unitY: '%'
+				},
+				toggle: true
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(1).addClass('selected');
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(0).addClass('selected');
+			});
+
+			bite.register({
+				type: 'element',
+				$el: $('#skills'),
+				point: {
+					y: true
+				},
+				origin: {
+					y: 50,
+					unitY: '%'
+				},
+				toggle: true
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(2).addClass('selected');
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(1).addClass('selected');
+			});
+
+			bite.register({
+				type: 'element',
+				$el: $('#contact'),
+				point: {
+					y: true
+				},
+				origin: {
+					y: 50,
+					unitY: '%'
+				},
+				toggle: true
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(4).addClass('selected');
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(2).addClass('selected');
+			});
+
+			bite.register({
+				type: 'element',
+				$el: $('#footer'),
+				point: {
+					y: true
+				},
+				origin: {
+					y: 100,
+					unitY: '%'
+				},
+				toggle: true
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(4).addClass('selected');
+			}, function() {
+				$navLinks.removeClass('selected');
+				$navLinks.eq(2).addClass('selected');
+			});
 
 		},
 
@@ -34,6 +114,10 @@ define([
 			} else if(this.size === 'large') {
 				this.$el.removeClass('small');
 			}
+		},
+
+		events: {
+			'sectionChange': '_onSectionChange'
 		},
 
 		_onJumbotronExit: function() {

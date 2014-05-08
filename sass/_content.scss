@@ -51,8 +51,11 @@ body {
 
 .module {
 	position: relative;
-}
 
+	> .container_12 {
+		height: 300px;
+	}
+}
 .module.style1 {
 	background: #fff;
 	color: #343434;
@@ -137,6 +140,11 @@ button.button-style1, a.psudo-button {
 	&.style3 {
 		font-weight: 400;
 	}
+}
+
+.marklet {
+	position: absolute;
+	top: -150px;
 }
 
 
@@ -276,10 +284,10 @@ button.button-style1, a.psudo-button {
 
 	.intro {
 		font: {
-			size: 1.21em;
+			size: 1.3em;
 		}
 		line-height: 1.5;
-		width: 550px;
+		width: 680px;
 		margin: 0 auto;
 		margin-bottom: 80px;
 		text-shadow: 1px 1px 0px #000;
@@ -292,8 +300,8 @@ button.button-style1, a.psudo-button {
 
 //statement
 #statement {
-	.container_12 {
-		height: 574px;
+	> .container_12 {
+		height: 630px;
 	}
 
 	article.grid_4 {
@@ -323,14 +331,14 @@ button.button-style1, a.psudo-button {
 
 #phone-container {
 	position: relative;
-	margin-top: -100px;
+	margin-top: -166px;
 	float: right;
 	width: 550px;
 
 	.phone {
 		position: relative;
 		width: 400px;
-		height: 674px;
+		height: 780px;
 		background: url(/images/phone.png) no-repeat;
 		margin: 0 auto;
 	}
@@ -358,7 +366,7 @@ button.button-style1, a.psudo-button {
 
 		iframe {
 			width: 100%;
-			height: 572px;
+			height: 580px;
 		}
 	}
 
@@ -397,7 +405,9 @@ button.button-style1, a.psudo-button {
 
 //Skills
 #skills {
-	height: 577px;
+	> .container_12 {
+		height: 577px;
+	}
 
 	.icons {
 		padding-top: 50px;
@@ -472,7 +482,7 @@ button.button-style1, a.psudo-button {
 	}
 
 	article.grid_4 {
-		padding-top: 50px;
+		//padding-top: 50px;
 	}
 
 	h1 {
@@ -496,7 +506,7 @@ button.button-style1, a.psudo-button {
 
 	.hours {
 		display: inline-block;
-		background: #fff;
+		background: #ecf0f1;
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 		border-radius: 10px;
@@ -522,7 +532,9 @@ button.button-style1, a.psudo-button {
 
 //Clients
 #clients {
-	height: 445px;
+	> .container_12 {
+		height: 445px;
+	}
 
 	h1 {
 		text-align: center;
@@ -532,29 +544,46 @@ button.button-style1, a.psudo-button {
 	}
 }
 
+
 #client-list {
 	li {
-		> span {
+		> p {
 			@extend .no-text;
 		}
 
 		> div {
 			height: 100px;
-			background-position: center center;
+			background: url(/images/clients.png);
+			background-position: 50% 0;
 			background-repeat: no-repeat;
+
+		}
+
+		.clients-hsbc {
+			background-position: 50% 0;
+		}
+
+		.clients-nationwide {
+			background-position: 50% -100px;
+		}
+
+		.clients-anz {
+			background-position: 50% -200px;
+		}
+
+		.clients-mantra {
+			background-position: 50% -300px;
 		}
 	}
 }
 
 //Footer
 #footer {
-	height: 140px;
-	.angle {
-		height: 140px;
-	}
-
-	.container_12 {
-		padding-top: 86px;
+	overflow: hidden;
+	
+	> .container_12 {
+		height: 55px;
+		margin-top: 86px;
 	}
 
 	.copyright {
