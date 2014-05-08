@@ -35,7 +35,7 @@
 }
 
 #statement {
-	> .mobile_container_4 {
+	> .grid_container {
 		height: 500px;
 	}
 
@@ -48,4 +48,52 @@
 
 #phone-container {
 	display: none;
+}
+
+#skills {
+	.icons {
+		display: none;
+	}
+}
+
+#client-list {
+	li {
+		> div {
+			height: 90px;
+			background-size: 90%;
+		}
+
+
+		.clients-hsbc {
+			background-position: 50% 0;
+		}
+
+		.clients-nationwide {
+			background-position: 50% -90px;
+		}
+
+		.clients-anz {
+			background-position: 50% -170px;
+		}
+
+		.clients-mantra {
+			background-position: 50% -250px;
+		}
+
+		.clients-vanquis {
+			display: none;
+		}
+
+		.clients-bubblekickz {
+			display: none;
+		}
+
+		.clients-motorfeed {
+			display: none;
+		}
+
+		.clients-unilink {
+			display: none;
+		}
+	}
 }

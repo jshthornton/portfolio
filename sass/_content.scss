@@ -52,7 +52,7 @@ body {
 .module {
 	position: relative;
 
-	> .container_12 {
+	> .grid_container {
 		height: 300px;
 	}
 }
@@ -315,7 +315,7 @@ button.button-style1, a.psudo-button {
 
 //statement
 #statement {
-	> .container_12 {
+	> .grid_container {
 		height: 630px;
 	}
 
@@ -420,7 +420,7 @@ button.button-style1, a.psudo-button {
 
 //Skills
 #skills {
-	> .container_12 {
+	> .grid_container {
 		height: 577px;
 	}
 
@@ -543,7 +543,7 @@ button.button-style1, a.psudo-button {
 
 //Clients
 #clients {
-	> .container_12 {
+	> .grid_container {
 		height: 445px;
 	}
 
@@ -609,7 +609,7 @@ button.button-style1, a.psudo-button {
 #footer {
 	overflow: hidden;
 	
-	> .container_12 {
+	> .grid_container {
 		height: 55px;
 		margin-top: 86px;
 	}
