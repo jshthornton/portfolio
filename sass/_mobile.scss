@@ -63,7 +63,6 @@
 			background-size: 90%;
 		}
 
-
 		.clients-hsbc {
 			background-position: 50% 0;
 		}
@@ -94,6 +93,35 @@
 
 		.clients-unilink {
 			display: none;
+		}
+	}
+}
+
+#footer {
+	> .grid_container {
+		height: auto;
+		margin-top: 0;
+	}
+
+	.copyright {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-list {
+		float: left;
+		margin-bottom: 30px;
+		> li {
+			display: none;
+			&.social-list {
+				padding-left: 0;
+				display: list-item;
+				margin-bottom: 20px;
+
+				li {
+					padding: 0 20px;
+				}
+			}
 		}
 	}
 }
