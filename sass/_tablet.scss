@@ -36,6 +36,18 @@
 	}
 }
 
+#statement {
+	> .container_12 {
+		height: 400px;
+	}
+
+	article {
+		p.last {
+			display: none;
+		}
+	}
+}
+
 #phone-container {
 	display: none;
 }
@@ -67,5 +79,9 @@
 				margin-left: 0;
 			}
 		}
+	}
+
+	article {
+		padding-top: 75px;
 	}
 }
