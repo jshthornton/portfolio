@@ -10,7 +10,6 @@
 			'underscore': '../libs/lodash',
 			'backbone': '../libs/backbone',
 			'text': '../libs/text',
-			'modernizr': '../libs/modernizr',
 			'bite': '../libs/bite',
 			'buoy': '../libs/buoy'
 		},

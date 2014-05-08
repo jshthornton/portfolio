@@ -243,6 +243,9 @@ button.button-style1, a.psudo-button {
 	width: 100%;
 	height: 696px;
 	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
 
 	background: url(/images/jumbotron.jpg) no-repeat;
 	background-position: center center;
@@ -265,6 +268,12 @@ button.button-style1, a.psudo-button {
 		left: 66%;
 		margin-left: -400px;
 		text-align: center;
+
+		.csstransforms & {
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
 	}
 
 	.compliment {
@@ -305,8 +314,8 @@ button.button-style1, a.psudo-button {
 		height: 630px;
 	}
 
-	article.grid_4 {
-		padding-top: 40px;
+	article {
+		padding-top: 10px;
 	}
 
 	h1 {
@@ -538,6 +547,7 @@ button.button-style1, a.psudo-button {
 		font: {
 			size: 1.8em;
 		}
+		margin-bottom: 50px;
 	}
 }
 

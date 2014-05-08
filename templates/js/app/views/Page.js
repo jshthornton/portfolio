@@ -26,18 +26,18 @@ define([
 
 		resizeJumbotron: function() {
 			var windowHeight = $(window).height(),
-				$jumbotron = $('#jumbotron'),
 				$padder = $('#padder');
 
-			$jumbotron.height(windowHeight);
 			$padder.css({
 				'margin-top': (windowHeight + 200) + 'px'
 			});
 
-			buoy.align({
-				$el: $('> .intro-container', $jumbotron),
-				$container: $jumbotron
-			});
+			if(!Modernizr.csstransforms) {
+				buoy.align({
+					$el: $('> .intro-container', $jumbotron),
+					$container: $jumbotron
+				});
+			}
 		},
 
 		//Events
