@@ -33,3 +33,19 @@
 		}
 	}
 }
+
+#statement {
+	> .mobile_container_4 {
+		height: 500px;
+	}
+
+	article {
+		p.last {
+			display: none;
+		}
+	}
+}
+
+#phone-container {
+	display: none;
+}
